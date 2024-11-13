@@ -1,0 +1,19 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "report": "npm run mergeJsonReport && npm run generateReport",
+    "mergeJsonReport": "npx mochawesome-merge ./mochawesome-report/*.json -o ./mochawesome-report/result.json",
+    "generateReport": "npx marge ./mochawesome-report/result.json -o ./mochawesome-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^13.15.2",
+    "mochawesome": "^7.1.3"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-12T19:31:43.964Z",
+    "end": "2024-11-12T19:31:53.068Z",
+    "duration": 9104,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "942baf6d-cb36-467c-a8ec-5b67c05bd308",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d9708b92-9bc5-421c-9a2f-9abfee0dab1b",
+          "title": "Funcionalidade - Login na loja",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Fazer o login com sucesso",
+              "fullTitle": "Funcionalidade - Login na loja Fazer o login com sucesso",
+              "timedOut": null,
+              "duration": 5345,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#username').type(perfil.usuario);\ncy.get('#password').type(perfil.senha);\ncy.get('.woocommerce-form > .button').click();\ncy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, josi.tcc (não é josi.tcc? Sair)');",
+              "err": {},
+              "uuid": "03a9c35d-ec71-4ea0-8fca-22a051ce56a7",
+              "parentUUID": "d9708b92-9bc5-421c-9a2f-9abfee0dab1b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Senha inválida",
+              "fullTitle": "Funcionalidade - Login na loja Senha inválida",
+              "timedOut": null,
+              "duration": 1856,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#username').type(perfil.usuario);\ncy.get('#password').type(perfil.senhaincorreta);\ncy.get('.woocommerce-form > .button').click();\ncy.get('.woocommerce-error > li').should('contain', 'Erro: A senha fornecida para o e-mail josi.tcc@teste.com está incorreta. Perdeu a senha?');",
+              "err": {},
+              "uuid": "def7e975-af2d-436a-b621-e31c38a3bc98",
+              "parentUUID": "d9708b92-9bc5-421c-9a2f-9abfee0dab1b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Usuário inexistente",
+              "fullTitle": "Funcionalidade - Login na loja Usuário inexistente",
+              "timedOut": null,
+              "duration": 1843,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#username').type(perfil.usuarioinexistente);\ncy.get('#password').type(perfil.senha);\ncy.get('.woocommerce-form > .button').click();\ncy.get('.woocommerce-error > li').should('contain', 'Endereço de e-mail desconhecido. Verifique novamente ou tente seu nome de usuário.');",
+              "err": {},
+              "uuid": "efc55296-256f-4066-8801-9fa0222888c6",
+              "parentUUID": "d9708b92-9bc5-421c-9a2f-9abfee0dab1b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "03a9c35d-ec71-4ea0-8fca-22a051ce56a7",
+            "def7e975-af2d-436a-b621-e31c38a3bc98",
+            "efc55296-256f-4066-8801-9fa0222888c6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9044,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[name]-result",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportFilename": "[name]-result",
+        "html": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}
